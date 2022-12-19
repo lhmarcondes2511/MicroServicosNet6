@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 var connection = builder.Configuration["ServicesURLs:ProductAPI"];
-builder.Services.AddHttpClient<IProductService, ProductService>(c => c.BaseAddress = new Uri(connection);
+builder.Services.AddHttpClient<IProductService, ProductService>(c => c.BaseAddress = new Uri(connection));
 
 var app = builder.Build();
 
