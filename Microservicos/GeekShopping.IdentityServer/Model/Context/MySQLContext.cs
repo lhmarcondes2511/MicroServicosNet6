@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GeekShopping.IdentityServer.Model.Context
 {
-	public class MySQLContext : IdentityDbContext<ApplicationUser>
+	public class MySqlContext : IdentityDbContext<ApplicationUser>
 	{
-		public MySQLContext(DbContextOptions<MySQLContext> options) : base(options) { }
+		public MySqlContext(DbContextOptions<MySqlContext> options) : base(options) { }
 
 	}
 }
