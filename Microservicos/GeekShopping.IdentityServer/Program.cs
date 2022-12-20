@@ -39,7 +39,7 @@ b.AddDeveloperSigningCredential();
 
 var app = builder.Build();
 
-IDbInitializer initializer = app.Services.GetRequiredService<IDbInitializer>();
+IDbInitializer initializer = app.Services.CreateScope().ServiceProvider.GetRequiredService<IDbInitializer>();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
