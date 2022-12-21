@@ -6,6 +6,7 @@ using GeekShopping.IdentityServer.Model;
 using GeekShopping.IdentityServer.Model.Context;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -43,6 +44,7 @@ var InitilizeDbServer = scope.ServiceProvider.GetRequiredService<IDbInitializer>
 if (!app.Environment.IsDevelopment())
 {
 	app.UseExceptionHandler("/Home/Error");
+	IdentityModelEventSource.ShowPII = true;
 }
 app.UseHttpsRedirection();
 app.UseStaticFiles();
