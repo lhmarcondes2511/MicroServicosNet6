@@ -33,6 +33,8 @@ var build = builder.Services.AddIdentityServer(options =>
 .AddAspNetIdentity<ApplicationUser>();
 
 builder.Services.AddScoped<IDbInitializer, DbInitializer>();
+builder.Services.AddScoped<IProfileService, ProfileService>();
+
 build.AddDeveloperSigningCredential();
 
 var app = builder.Build();
