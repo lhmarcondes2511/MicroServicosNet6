@@ -44,11 +44,11 @@ var InitilizeDbServer = scope.ServiceProvider.GetRequiredService<IDbInitializer>
 if (!app.Environment.IsDevelopment())
 {
 	app.UseExceptionHandler("/Home/Error");
-	IdentityModelEventSource.ShowPII = true;
 }
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+IdentityModelEventSource.ShowPII = true;
 app.UseRouting();
 app.UseIdentityServer();
 app.UseAuthorization();

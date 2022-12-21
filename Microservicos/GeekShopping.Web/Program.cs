@@ -37,10 +37,10 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
 	app.UseExceptionHandler("/Home/Error");
-	IdentityModelEventSource.ShowPII = true;
 }
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+IdentityModelEventSource.ShowPII = true;
 
 app.UseRouting();
 app.UseAuthentication();
