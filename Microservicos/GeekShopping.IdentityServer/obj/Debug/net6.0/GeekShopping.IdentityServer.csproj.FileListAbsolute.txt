@@ -58,3 +58,4 @@ C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\obj\Debug\net6.0\ref\GeekShopping.IdentityServer.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\Humanizer.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\keys\is-signing-key-7EFDBDCFC879A1D14B653A3B788552E9.json
