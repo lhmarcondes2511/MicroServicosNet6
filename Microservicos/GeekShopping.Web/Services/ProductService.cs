@@ -57,5 +57,5 @@ namespace GeekShopping.Web.Services
             else
                 throw new Exception("Something went wrong when calling API.");
         }
-    }
+	}
 }
