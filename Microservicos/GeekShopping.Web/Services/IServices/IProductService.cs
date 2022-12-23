@@ -1,4 +1,8 @@
 ﻿using GeekShopping.Web.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace GeekShopping.Web.Services.IServices
 {
@@ -9,5 +13,5 @@ namespace GeekShopping.Web.Services.IServices
         Task<ProductViewModel> CreateProduct(ProductViewModel model, string token);
         Task<ProductViewModel> UpdateProduct(ProductViewModel model, string token);
         Task<bool> DeleteProductById(long id, string token);
-	}
+    }
 }

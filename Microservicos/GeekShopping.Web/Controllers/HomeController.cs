@@ -3,7 +3,6 @@ using GeekShopping.Web.Services.IServices;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 
 namespace GeekShopping.Web.Controllers
@@ -11,64 +10,64 @@ namespace GeekShopping.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-		private readonly IProductService _productService;
-		private readonly ICartService _cartService;
+        private readonly IProductService _productService;
+        private readonly ICartService _cartService;
 
-		public HomeController(ILogger<HomeController> logger, IProductService productService, ICartService cartService)
-		{
-			_logger = logger;
-			_productService = productService;
-			_cartService = cartService;
-		}
-
-		public async Task<IActionResult> Index()
+        public HomeController(ILogger<HomeController> logger,
+            IProductService productService,
+            ICartService cartService)
         {
-			var products = await _productService.FindAllProducts("");
-			return View(products);
+            _logger = logger;
+            _productService = productService;
+            _cartService = cartService;
         }
 
-		[Authorize]
-		public async Task<IActionResult> Details(int id)
+        public async Task<IActionResult> Index()
         {
-			var token = HttpContext.GetTokenAsync("access_token").Result;
-			var model = await _productService.FindProductById(id, token);
-			return View(model);
+            var products = await _productService.FindAllProducts("");
+            return View(products);
         }
 
-		[Authorize]
-		[ActionName("Details")]
-		[HttpPost]
-		public async Task<IActionResult> DetailsPost(ProductViewModel model)
+        [Authorize]
+        public async Task<IActionResult> Details(int id)
         {
-			var token = HttpContext.GetTokenAsync("access_token").Result;
+            var token = await HttpContext.GetTokenAsync("access_token");
+            var model = await _productService.FindProductById(id, token);
+            return View(model);
+        }
 
-			CartViewModel cart = new CartViewModel()
-			{
-				CartHeader = new CartHeaderViewModel()
-				{
-					UserId = User.Claims.Where(u => u.Type == "sub")?.FirstOrDefault()?.Value
-				}
-			};
+        [HttpPost]
+        [ActionName("Details")]
+        [Authorize]
+        public async Task<IActionResult> DetailsPost(ProductViewModel model)
+        {
+            var token = await HttpContext.GetTokenAsync("access_token");
 
-			CartDetailViewModel cartDetail = new CartDetailViewModel()
-			{
-				Count = model.Count,
-				ProductId = model.Id,
-				Product = await _productService.FindProductById(model.Id, token)
-			};
+            CartViewModel cart = new()
+            {
+                CartHeader = new CartHeaderViewModel()
+                {
+                    UserId = User.Claims.Where(u => u.Type == "sub")?.FirstOrDefault()?.Value
+                }
+            };
 
-			List<CartDetailViewModel> cartDetails = new List<CartDetailViewModel>();
-			cartDetails.Add(cartDetail);
+            CartDetailViewModel cartDetail = new CartDetailViewModel()
+            {
+                Count = model.Count,
+                ProductId = model.Id,
+                Product = await _productService.FindProductById(model.Id, token)
+            };
 
-			cart.CartDetails = cartDetails;
+            List<CartDetailViewModel> cartDetails = new List<CartDetailViewModel>();
+            cartDetails.Add(cartDetail);
+            cart.CartDetails = cartDetails;
 
-			var response = await _cartService.AddItemToCart(cart, token);
-			if(response != null)
-			{
-				return RedirectToAction(nameof(Index));
-			}
-
-			return View(model);
+            var response = await _cartService.AddItemToCart(cart, token);
+            if(response != null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            return View(model);
         }
 
         public IActionResult Privacy()
@@ -82,15 +81,15 @@ namespace GeekShopping.Web.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-		[Authorize]
-		public async Task<IActionResult> Login()
-		{
-            var accessToken = HttpContext.GetTokenAsync("access_token");
-			return RedirectToAction(nameof(Index));
-		}
-		public IActionResult Logout()
-		{
-			return SignOut("Cookies", "oidc");
-		}
-	}
+        [Authorize]
+        public async Task<IActionResult> Login()
+        {
+            var accessToken = await HttpContext.GetTokenAsync("access_token");
+            return RedirectToAction(nameof(Index));
+        }
+        public IActionResult Logout()
+        {
+            return SignOut("Cookies", "oidc");
+        }
+    }
 }
