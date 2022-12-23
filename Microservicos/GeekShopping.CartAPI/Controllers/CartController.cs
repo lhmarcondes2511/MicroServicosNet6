@@ -15,7 +15,6 @@ namespace GeekShopping.CartAPI.Controllers
 			_repository = repository ?? throw new ArgumentNullException(nameof(repository));
 		}
 
-		[Authorize]
 		[HttpGet("find-cart/{id}")]
 		public async Task<ActionResult<CartVO>> FindById(string id)
 		{
