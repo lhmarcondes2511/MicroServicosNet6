@@ -1,13 +1,10 @@
 ﻿using GeekShopping.Web.Models;
 using GeekShopping.Web.Services.IServices;
 using GeekShopping.Web.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Reflection;
-using System.Threading.Tasks;
+using System.Net.Http.Json;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace GeekShopping.Web.Services
 {
@@ -28,16 +25,16 @@ namespace GeekShopping.Web.Services
             return await response.ReadContentAs<CartViewModel>();
         }
 
-        public async Task<CartViewModel> AddItemToCart(CartViewModel model, string token)
-        {
-            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-            var response = await _client.PostAsJson($"{BasePath}/add-cart", model);
-            if (response.IsSuccessStatusCode)
-                return await response.ReadContentAs<CartViewModel>();
-            else throw new Exception("Something went wrong when calling API");
-        }
+		public async Task<CartViewModel> AddItemToCart(CartViewModel model, string token)
+		{
+			_client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+			var response = await _client.PostAsJson($"{BasePath}/add-cart", model);
+			if (response.IsSuccessStatusCode)
+				return await response.ReadContentAs<CartViewModel>();
+			else throw new Exception("Something went wrong when calling API");
+		}
 
-        public async Task<CartViewModel> UpdateCart(CartViewModel model, string token)
+		public async Task<CartViewModel> UpdateCart(CartViewModel model, string token)
         {
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             var response = await _client.PutAsJson($"{BasePath}/update-cart", model);

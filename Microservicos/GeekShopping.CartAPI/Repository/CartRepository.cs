@@ -41,20 +41,20 @@ namespace GeekShopping.CartAPI.Repository
             return false;
         }
 
-        public async Task<CartVO> FindCartByUserId(string userId)
-        {
-            Cart cart = new()
-            {
-                CartHeader = await _context.CartHeaders
-                    .FirstOrDefaultAsync(c => c.UserId == userId),
-            };
-            cart.CartDetails = _context.CartDetails
-                .Where(c => c.CartHeaderId == cart.CartHeader.Id)
-                    .Include(c => c.Product);
-            return _mapper.Map<CartVO>(cart);
-        }
+		public async Task<CartVO> FindCartByUserId(string userId)
+		{
+			Cart cart = new()
+			{
+				CartHeader = await _context.CartHeaders
+					.FirstOrDefaultAsync(c => c.UserId == userId) ?? new CartHeader(),
+			};
+			cart.CartDetails = _context.CartDetails
+				.Where(c => c.CartHeaderId == cart.CartHeader.Id)
+					.Include(c => c.Product);
+			return _mapper.Map<CartVO>(cart);
+		}
 
-        public async Task<bool> RemoveCoupon(string userId)
+		public async Task<bool> RemoveCoupon(string userId)
         {
             throw new NotImplementedException();
         }

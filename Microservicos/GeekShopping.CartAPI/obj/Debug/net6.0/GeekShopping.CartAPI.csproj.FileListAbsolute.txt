@@ -9,17 +9,10 @@ C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Humanizer.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll

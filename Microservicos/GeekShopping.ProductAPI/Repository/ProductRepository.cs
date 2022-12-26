@@ -3,6 +3,10 @@ using GeekShopping.ProductAPI.Data.ValueObjects;
 using GeekShopping.ProductAPI.Model;
 using GeekShopping.ProductAPI.Model.Context;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace GeekShopping.ProductAPI.Repository
 {
@@ -10,10 +14,11 @@ namespace GeekShopping.ProductAPI.Repository
     {
         private readonly MySqlContext _context;
         private IMapper _mapper;
-        public ProductRepository(MySqlContext context, IMapper mapper) 
+
+        public ProductRepository(MySqlContext context, IMapper mapper)
         {
-            _mapper = mapper;
             _context = context;
+            _mapper = mapper;
         }
 
         public async Task<IEnumerable<ProductVO>> FindAll()
@@ -24,7 +29,9 @@ namespace GeekShopping.ProductAPI.Repository
 
         public async Task<ProductVO> FindById(long id)
         {
-            Product product = await _context.Products.Where(p => p.Id == id).FirstOrDefaultAsync() ?? new Product();
+            Product product =
+                await _context.Products.Where(p => p.Id == id)
+                .FirstOrDefaultAsync();
             return _mapper.Map<ProductVO>(product);
         }
 
@@ -35,7 +42,6 @@ namespace GeekShopping.ProductAPI.Repository
             await _context.SaveChangesAsync();
             return _mapper.Map<ProductVO>(product);
         }
-
         public async Task<ProductVO> Update(ProductVO vo)
         {
             Product product = _mapper.Map<Product>(vo);
@@ -43,22 +49,21 @@ namespace GeekShopping.ProductAPI.Repository
             await _context.SaveChangesAsync();
             return _mapper.Map<ProductVO>(product);
         }
+
         public async Task<bool> Delete(long id)
         {
             try
             {
-                Product product = await _context.Products.Where(p => p.Id == id).FirstOrDefaultAsync() ?? new Product();
-                if(product.Id <= 0)
-                {
-                    return false;
-                }
+                Product product =
+                await _context.Products.Where(p => p.Id == id)
+                    .FirstOrDefaultAsync();
+                if (product == null) return false;
                 _context.Products.Remove(product);
                 await _context.SaveChangesAsync();
                 return true;
             }
             catch (Exception)
             {
-
                 return false;
             }
         }

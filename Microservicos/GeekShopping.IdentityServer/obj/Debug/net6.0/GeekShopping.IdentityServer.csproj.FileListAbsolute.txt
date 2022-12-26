@@ -1,5 +1,6 @@
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\appsettings.json
+C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\keys\is-signing-key-7EFDBDCFC879A1D14B653A3B788552E9.json
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\GeekShopping.IdentityServer.staticwebassets.runtime.json
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\GeekShopping.IdentityServer.exe
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\GeekShopping.IdentityServer.deps.json
@@ -9,6 +10,7 @@ C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\Duende.IdentityServer.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\Duende.IdentityServer.AspNetIdentity.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\Duende.IdentityServer.Storage.dll
+C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\Humanizer.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\IdentityModel.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
@@ -17,6 +19,7 @@ C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
@@ -56,6 +59,3 @@ C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.pdb
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\obj\Debug\net6.0\GeekShopping.IdentityServer.genruntimeconfig.cache
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\obj\Debug\net6.0\ref\GeekShopping.IdentityServer.dll
-C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\Humanizer.dll
-C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.IdentityServer\bin\Debug\net6.0\keys\is-signing-key-7EFDBDCFC879A1D14B653A3B788552E9.json

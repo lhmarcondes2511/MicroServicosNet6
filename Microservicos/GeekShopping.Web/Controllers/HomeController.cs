@@ -39,38 +39,41 @@ namespace GeekShopping.Web.Controllers
         [HttpPost]
         [ActionName("Details")]
         [Authorize]
-        public async Task<IActionResult> DetailsPost(ProductViewModel model)
-        {
-            var token = await HttpContext.GetTokenAsync("access_token");
+		public async Task<IActionResult> DetailsPost(ProductViewModel model)
+		{
+			var token = await HttpContext.GetTokenAsync("access_token");
 
-            CartViewModel cart = new()
-            {
-                CartHeader = new CartHeaderViewModel()
-                {
-                    UserId = User.Claims.Where(u => u.Type == "sub")?.FirstOrDefault()?.Value
-                }
-            };
+			CartViewModel cart = new()
+			{
+				CartHeader = new CartHeaderViewModel
+				{
+					UserId = User.Claims.Where(u => u.Type == "sub")?.FirstOrDefault()?.Value
+				}
+			};
 
-            CartDetailViewModel cartDetail = new CartDetailViewModel()
-            {
-                Count = model.Count,
-                ProductId = model.Id,
-                Product = await _productService.FindProductById(model.Id, token)
-            };
+			CartDetailViewModel cartDetail = new CartDetailViewModel()
+			{
+				Count = model.Count,
+				ProductId = model.Id,
+				Product = await _productService.FindProductById(model.Id, token)
+			};
 
-            List<CartDetailViewModel> cartDetails = new List<CartDetailViewModel>();
-            cartDetails.Add(cartDetail);
-            cart.CartDetails = cartDetails;
+			List<CartDetailViewModel> cartDetails = new List<CartDetailViewModel>
+			{
+				cartDetail
+			};
 
-            var response = await _cartService.AddItemToCart(cart, token);
-            if(response != null)
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            return View(model);
-        }
+			cart.CartDetails = cartDetails;
 
-        public IActionResult Privacy()
+			var response = await _cartService.AddItemToCart(cart, token);
+			if (response != null)
+			{
+				return RedirectToAction(nameof(Index));
+			}
+			return View(model);
+		}
+
+		public IActionResult Privacy()
         {
             return View();
         }

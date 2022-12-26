@@ -29,7 +29,7 @@ namespace GeekShopping.Web.Services
         public async Task<ProductViewModel> FindProductById(long id, string token)
         {
             _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-            var response = await _client.GetAsync($"{BasePath}/{id}");
+            var response = await _client.GetAsync($"{BasePath}/id?id={id}");
             return await response.ReadContentAs<ProductViewModel>();
         }
 
