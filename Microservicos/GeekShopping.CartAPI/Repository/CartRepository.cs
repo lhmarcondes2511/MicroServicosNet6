@@ -46,7 +46,7 @@ namespace GeekShopping.CartAPI.Repository
 			Cart cart = new()
 			{
 				CartHeader = await _context.CartHeaders
-					.FirstOrDefaultAsync(c => c.UserId == userId) ?? new CartHeader(),
+					.FirstOrDefaultAsync(c => c.UserId == userId),
 			};
 			cart.CartDetails = _context.CartDetails
 				.Where(c => c.CartHeaderId == cart.CartHeader.Id)
@@ -70,8 +70,11 @@ namespace GeekShopping.CartAPI.Repository
                     .Where(c => c.CartHeaderId == cartDetail.CartHeaderId).Count();
 
                 _context.CartDetails.Remove(cartDetail);
-                
-                if (total == 1)
+
+				//var product = await _context.Products.FirstOrDefaultAsync(c => c.Id == cartDetail.ProductId);
+				//_context.Products.Remove(product);
+
+				if (total == 1)
                 {
                     var cartHeaderToRemove = await _context.CartHeaders
                         .FirstOrDefaultAsync(c => c.Id == cartDetail.CartHeaderId);
@@ -107,8 +110,7 @@ namespace GeekShopping.CartAPI.Repository
             if (cartHeader == null)
             {
                 //Create CartHeader and CartDetails
-                _context.CartHeaders.Add(cart.CartHeader);
-                await _context.SaveChangesAsync();
+                //_context.CartHeaders.Add(cart.CartHeader);
                 cart.CartDetails.FirstOrDefault().CartHeaderId = cart.CartHeader.Id;
                 cart.CartDetails.FirstOrDefault().Product = null;
                 _context.CartDetails.Add(cart.CartDetails.FirstOrDefault());

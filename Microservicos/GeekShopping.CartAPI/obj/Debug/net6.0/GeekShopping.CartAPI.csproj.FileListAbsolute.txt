@@ -47,3 +47,10 @@ C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\obj\Debug\net6.0\GeekShopping.CartAPI.pdb
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\obj\Debug\net6.0\GeekShopping.CartAPI.genruntimeconfig.cache
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\obj\Debug\net6.0\ref\GeekShopping.CartAPI.dll
+C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
