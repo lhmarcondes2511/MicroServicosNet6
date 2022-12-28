@@ -1,7 +1,7 @@
-﻿using GeekShopping.CartAPI.Model.Base;
+﻿using GeekShopping.CuponAPI.Model.Base;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace GeekShopping.CartAPI.Model
+namespace GeekShopping.CuponAPI.Model
 {
 	[Table("cart_detail")]
 	public class CartDetail : BaseEntity

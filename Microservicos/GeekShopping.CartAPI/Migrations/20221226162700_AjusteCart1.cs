@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace GeekShopping.CartAPI.Migrations
+namespace GeekShopping.CuponAPI.Migrations
 {
     public partial class AjusteCart1 : Migration
     {

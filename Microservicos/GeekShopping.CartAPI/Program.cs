@@ -1,11 +1,12 @@
 using AutoMapper;
-using GeekShopping.CartAPI.Model.Context;
-using GeekShopping.CartAPI.Config;
+using GeekShopping.CuponAPI.Model.Context;
+using GeekShopping.CuponAPI.Config;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using GeekShopping.CartAPI.Repository;
+using GeekShopping.CuponAPI.Repository;
 using Microsoft.IdentityModel.Logging;
+using GeekShopping.CartAPI.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
@@ -20,7 +21,7 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddScoped<ICartRepository, CartRepository>();
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 
 builder.Services.AddAuthentication("Bearer")
 	.AddJwtBearer("Bearer", options =>

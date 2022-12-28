@@ -1,7 +1,7 @@
-﻿using GeekShopping.CartAPI.Model.Base;
+﻿using GeekShopping.CuponAPI.Model.Base;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace GeekShopping.CartAPI.Data.ValueObjects
+namespace GeekShopping.CuponAPI.Data.ValueObjects
 {
     public class CartHeaderVO
     {
