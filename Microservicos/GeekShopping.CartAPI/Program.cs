@@ -7,6 +7,7 @@ using Microsoft.OpenApi.Models;
 using GeekShopping.CuponAPI.Repository;
 using Microsoft.IdentityModel.Logging;
 using GeekShopping.CartAPI.Repository;
+using GeekShopping.CartAPI.RabbitMQSender;
 
 var builder = WebApplication.CreateBuilder(args);
 IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
@@ -20,6 +21,7 @@ builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddScoped<ICartRepository, CartRepository>();
+builder.Services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
 
 builder.Services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 

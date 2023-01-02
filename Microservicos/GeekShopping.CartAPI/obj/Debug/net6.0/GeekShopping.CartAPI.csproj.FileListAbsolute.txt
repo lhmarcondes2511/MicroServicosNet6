@@ -54,3 +54,6 @@ C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\GeekShopping.MessageBus.dll
+C:\Users\JK_Familia\Documents\Curso\MicroServicosNet6\Microservicos\GeekShopping.CartAPI\bin\Debug\net6.0\GeekShopping.MessageBus.pdb
