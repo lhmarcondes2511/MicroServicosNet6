@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using GeekShopping.CuponAPI.Data.ValueObjects;
-using GeekShopping.CuponAPI.Model;
-using GeekShopping.CuponAPI.Model.Context;
-using GeekShopping.CuponAPI.Repository;
+using GeekShopping.CartAPI.Data.ValueObjects;
+using GeekShopping.CartAPI.Model;
+using GeekShopping.CartAPI.Model.Context;
+using GeekShopping.CartAPI.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace GeekShopping.CartAPI.Repository

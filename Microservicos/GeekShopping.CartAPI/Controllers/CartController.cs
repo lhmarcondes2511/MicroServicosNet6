@@ -1,10 +1,10 @@
 ﻿using GeekShopping.CartAPI.Messages;
 using GeekShopping.CartAPI.RabbitMQSender;
-using GeekShopping.CuponAPI.Data.ValueObjects;
-using GeekShopping.CuponAPI.Repository;
+using GeekShopping.CartAPI.Data.ValueObjects;
+using GeekShopping.CartAPI.Repository;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GeekShopping.CuponAPI.Controllers
+namespace GeekShopping.CartAPI.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]

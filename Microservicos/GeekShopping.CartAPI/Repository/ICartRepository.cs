@@ -1,10 +1,10 @@
-﻿using GeekShopping.CuponAPI.Data.ValueObjects;
+﻿using GeekShopping.CartAPI.Data.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GeekShopping.CuponAPI.Repository
+namespace GeekShopping.CartAPI.Repository
 {
     public interface ICartRepository
     {

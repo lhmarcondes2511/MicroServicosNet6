@@ -1,10 +1,10 @@
 using AutoMapper;
-using GeekShopping.CuponAPI.Model.Context;
-using GeekShopping.CuponAPI.Config;
+using GeekShopping.CartAPI.Model.Context;
+using GeekShopping.CartAPI.Config;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using GeekShopping.CuponAPI.Repository;
+using GeekShopping.CartAPI.Repository;
 using Microsoft.IdentityModel.Logging;
 using GeekShopping.CartAPI.Repository;
 using GeekShopping.CartAPI.RabbitMQSender;

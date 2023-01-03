@@ -1,4 +1,4 @@
-﻿using GeekShopping.CuponAPI.Data.ValueObjects;
+﻿using GeekShopping.CartAPI.Data.ValueObjects;
 using GeekShopping.MessageBus;
 
 namespace GeekShopping.CartAPI.Messages
