@@ -1,5 +1,6 @@
 using GeekShopping.OrderAPI.MessageConsumer;
 using GeekShopping.OrderAPI.Model.Context;
+using GeekShopping.OrderAPI.RabbitMQSender;
 using GeekShopping.OrderAPI.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -18,6 +19,8 @@ build.UseMySql(connection, new MySqlServerVersion(new Version(8, 0, 20)));
 builder.Services.AddSingleton(new OrderRepository(build.Options));
 
 builder.Services.AddHostedService<RabbitMQCheckoutConsumer>();
+
+builder.Services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
 
 builder.Services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 
