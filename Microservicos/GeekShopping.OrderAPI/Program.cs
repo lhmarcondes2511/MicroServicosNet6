@@ -19,6 +19,7 @@ build.UseMySql(connection, new MySqlServerVersion(new Version(8, 0, 20)));
 builder.Services.AddSingleton(new OrderRepository(build.Options));
 
 builder.Services.AddHostedService<RabbitMQCheckoutConsumer>();
+builder.Services.AddHostedService<RabbitMQPaymentConsumer>();
 
 builder.Services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
 
@@ -47,7 +48,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "GeekShopping.OrderAPI", Version = "v1" });
-    c.EnableAnnotations();
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = @"Enter 'Bearer' [space] and your token!",

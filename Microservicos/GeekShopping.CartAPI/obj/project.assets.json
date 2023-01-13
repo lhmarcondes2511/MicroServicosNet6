@@ -2038,19 +2038,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\JK_Familia\\.nuget\\packages\\": {}
+    "C:\\Users\\JK - Familia\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JK_Familia\\Documents\\Curso\\MicroServicosNet6\\Microservicos\\GeekShopping.CartAPI\\GeekShopping.CartAPI.csproj",
+      "projectUniqueName": "C:\\Users\\JK - Familia\\Documents\\Curso\\MicroServicosNet6\\Microservicos\\GeekShopping.CartAPI\\GeekShopping.CartAPI.csproj",
       "projectName": "GeekShopping.CartAPI",
-      "projectPath": "C:\\Users\\JK_Familia\\Documents\\Curso\\MicroServicosNet6\\Microservicos\\GeekShopping.CartAPI\\GeekShopping.CartAPI.csproj",
-      "packagesPath": "C:\\Users\\JK_Familia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JK_Familia\\Documents\\Curso\\MicroServicosNet6\\Microservicos\\GeekShopping.CartAPI\\obj\\",
+      "projectPath": "C:\\Users\\JK - Familia\\Documents\\Curso\\MicroServicosNet6\\Microservicos\\GeekShopping.CartAPI\\GeekShopping.CartAPI.csproj",
+      "packagesPath": "C:\\Users\\JK - Familia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JK - Familia\\Documents\\Curso\\MicroServicosNet6\\Microservicos\\GeekShopping.CartAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\JK_Familia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JK - Familia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2058,14 +2063,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\JK_Familia\\Documents\\Curso\\MicroServicosNet6\\Microservicos\\GeekShopping.MessageBus\\GeekShopping.MessageBus.csproj": {
-              "projectPath": "C:\\Users\\JK_Familia\\Documents\\Curso\\MicroServicosNet6\\Microservicos\\GeekShopping.MessageBus\\GeekShopping.MessageBus.csproj"
+            "C:\\Users\\JK - Familia\\Documents\\Curso\\MicroServicosNet6\\Microservicos\\GeekShopping.MessageBus\\GeekShopping.MessageBus.csproj": {
+              "projectPath": "C:\\Users\\JK - Familia\\Documents\\Curso\\MicroServicosNet6\\Microservicos\\GeekShopping.MessageBus\\GeekShopping.MessageBus.csproj"
             }
           }
         }
